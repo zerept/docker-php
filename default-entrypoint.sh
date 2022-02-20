@@ -11,12 +11,14 @@ sleep 1
 echo " ########### DATA E HORA - OK ########### "  >> .msg
 echo " "  >> .msg
 echo " " >> .msg
+
 echo " ########### CONFIGURANDO GATEWAY - NGINX ########### " >> .msg
 yum install nginx -y
 echo " " >> .msg
 cp /nginx.conf /etc/nginx/nginx.conf
 sleep 1 && nginx && sleep 1 && nginx -s reload && sleep 1
 nginx -v >> .msg
+echo $(nginx -v) >> .msg
 echo " " >> .msg
 echo " ########### GATEWAY - OK ########### " >> .msg
 
