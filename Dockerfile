@@ -16,5 +16,8 @@ RUN rpm -Uvh https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN yum-config-manager --enable remi-php74 && yum update -y
 RUN yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql php-fpm -y
 
-#ENTRYPOINT ["sh","default-entrypoint.sh"]
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+
+ENTRYPOINT ["sh","default-entrypoint.sh"]
+
 EXPOSE 8080
