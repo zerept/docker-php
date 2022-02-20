@@ -38,6 +38,7 @@ sleep 1
 yum clean all -y
 clear
 sleep 1
+docker push zerept/c7-php74-compilado:latest
 cat .msg
 
 sleep 1d
