@@ -7,5 +7,9 @@ COPY app/ /app
 COPY nginx.conf .
 COPY default.conf /etc/nginx/conf.d/
 RUN chmod +x default-entrypoint.sh
-ENTRYPOINT ["sh","default-entrypoint.sh"]
+
+RUN yum install nginx -y
+COPY /nginx.conf /etc/nginx/nginx.conf
+
+#ENTRYPOINT ["sh","default-entrypoint.sh"]
 EXPOSE 8080
