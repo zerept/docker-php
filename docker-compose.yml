@@ -1,0 +1,9 @@
+version: "3"
+services:
+  php:
+    #image: 'docker.io/zerept/c7-php74:latest'
+    image: 'local/c7-php74:latest'
+        container_name: 'c7-php74'
+        restart: unless-stopped
+        ports:
+            - '48004:8080' # Public HTTP Port
