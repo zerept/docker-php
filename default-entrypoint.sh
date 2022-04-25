@@ -7,4 +7,4 @@ php -v
 sleep 1
 yum clean all -y
 
-sleep 1d
+sleep 999d
