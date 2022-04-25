@@ -1,5 +1,4 @@
-FROM local/c7-systemd
-#FROM zerept/c7-systemd
+FROM zerept/c7-systemd
 WORKDIR /
 RUN mkdir -p /app && mkdir -p /run/php-fpm && mkdir -p /etc/nginx/conf.d
 COPY default-entrypoint.sh .
